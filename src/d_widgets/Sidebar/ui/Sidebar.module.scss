@@ -1,0 +1,28 @@
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar {
+    @include flex-column;
+    
+    justify-content: space-between;
+    height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    background: var(--inverted-bg-color);
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+}
+
+.transition-width {
+    transition: width 1s;
+}
+
+.switchers {
+    @include flex-column;
+
+    gap: 20px;
+}

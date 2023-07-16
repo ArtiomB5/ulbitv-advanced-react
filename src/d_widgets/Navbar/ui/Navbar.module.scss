@@ -1,12 +1,22 @@
-.navbar {
-    width: 100%;
-    height: 50px;
-    background: var(--inverted-bg-color);
+@mixin flex-row {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+  }
+
+.navbar {
+    @include flex-row;
+
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--inverted-bg-color);
+    justify-content: flex-end;
+    padding: 0 20px;
 }
 
+.links {
+    @include flex-row;
+
+    justify-content: flex-end;
+    gap: 20px;
+}
