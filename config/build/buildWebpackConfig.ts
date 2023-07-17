@@ -20,7 +20,7 @@ export const buildWebpackConfig = (options: IBuildOptions): webpack.Configuratio
             filename: '[name].[contenthash].js',
             clean: true,
         },
-        plugins: buildPlugins(paths),
+        plugins: buildPlugins(paths, isDev),
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined
     };

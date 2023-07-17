@@ -5,17 +5,22 @@ import { AppRouter } from './providers/router/ui/AppRouter';
 import { Navbar } from 'd_widgets/Navbar';
 import { ThemeSwitcher } from 'd_widgets/ThemeSwitcher';
 import { Sidebar } from 'd_widgets/Sidebar';
+import { Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
     const { theme } = useTheme();
 
+    
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Navbar />
-            <div className={'content-page'}>
-                <Sidebar />
-                <AppRouter />
-            </div>
+            <Suspense fallback={'Loading...'}>
+                <Navbar />
+                <div className={'content-page'}>
+                    <Sidebar />
+                    <AppRouter />
+                </div>
+            </Suspense>
         </div>
     );
 };
