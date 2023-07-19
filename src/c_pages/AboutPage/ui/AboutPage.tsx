@@ -1,7 +1,7 @@
-const AboutPage = () => {
-    return (
-        <div>AboutPage</div>
-    )
+const AboutPage = (): JSX.Element => {
+  return (
+      <div>AboutPage</div>
+  )
 }
 
-export default AboutPage;
+export default AboutPage
