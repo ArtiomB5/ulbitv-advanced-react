@@ -5,6 +5,7 @@ module.exports = {
     },
     "extends": [
         "plugin:react/recommended",
+        "plugin:i18next/recommended",
     ],
     "overrides": [
         {
@@ -25,7 +26,8 @@ module.exports = {
         "project": ["./tsconfig.json"]
     },
     "plugins": [
-        "react"
+        "react",
+        "i18next"
     ],
     "settings": {
         "react": {
@@ -45,5 +47,6 @@ module.exports = {
         "no-shadow": "off",
         "import/extensions": "off",
         "import/no-extraneous-dependencies": "off",
+        "i18next/no-literal-string": ["error", { markupOnly: true }]
     }
 }

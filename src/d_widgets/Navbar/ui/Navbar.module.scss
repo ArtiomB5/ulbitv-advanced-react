@@ -1,22 +1,22 @@
 @mixin flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .navbar {
-    @include flex-row;
+  @include flex-row;
 
-    width: 100%;
-    height: var(--navbar-height);
-    background: var(--inverted-bg-color);
-    justify-content: flex-end;
-    padding: 0 20px;
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--inverted-bg-color);
+  justify-content: flex-end;
+  padding: 0 20px;
 }
 
 .links {
-    @include flex-row;
+  @include flex-row;
 
-    justify-content: flex-end;
-    gap: 20px;
+  justify-content: flex-end;
+  gap: 20px;
 }
