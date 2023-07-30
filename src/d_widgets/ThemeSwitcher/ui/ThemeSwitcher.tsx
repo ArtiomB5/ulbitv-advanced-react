@@ -11,7 +11,7 @@ interface IThemeSwitcherProps {
 }
 
 export const ThemeSwitcher: FC<IThemeSwitcherProps> = (props) => {
-  const { className } = props;
+  const { className = '' } = props;
   const { theme, toggleTheme } = useTheme();
 
   return <Button

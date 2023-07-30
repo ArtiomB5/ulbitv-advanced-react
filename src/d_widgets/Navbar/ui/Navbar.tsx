@@ -8,7 +8,7 @@ interface INavbarProps {
   className?: string
 }
 export const Navbar: FC<INavbarProps> = (props) => {
-  const { className } = props;
+  const { className = '' } = props;
   const { t } = useTranslation("navbar");
   return <div className={classNames(cls.navbar, {}, [className])}>
     <div className={cls.links}>

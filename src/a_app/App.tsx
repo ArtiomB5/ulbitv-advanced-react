@@ -9,7 +9,7 @@ import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const App = () => {
-    const { theme } = useTheme();
+    const { theme = '' } = useTheme();
 
     
     return (

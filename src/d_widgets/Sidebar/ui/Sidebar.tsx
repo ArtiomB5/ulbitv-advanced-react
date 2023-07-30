@@ -11,7 +11,7 @@ interface ISidebarProps {
 export const Sidebar: FC<ISidebarProps> = (props) => {
   const [collapsed, setCollapsed] = useState(false);
 
-  const { className } = props;
+  const { className = '' } = props;
 
   const mods = {
     [cls['collapsed']]: collapsed,
