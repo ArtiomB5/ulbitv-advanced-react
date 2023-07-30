@@ -7,14 +7,14 @@ import { ThemeSwitcher } from 'd_widgets/ThemeSwitcher';
 import { Sidebar } from 'd_widgets/Sidebar';
 import { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
+import { PageLoader } from 'g_shared/ui/PageLoader';
 
 const App = () => {
     const { theme = '' } = useTheme();
 
-    
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback={'Loading...'}>
+            <Suspense fallback={<PageLoader />}>
                 <Navbar />
                 <div className={'content-page'}>
                     <Sidebar />
